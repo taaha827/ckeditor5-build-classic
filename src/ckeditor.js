@@ -31,8 +31,6 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 
-
-
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -95,7 +93,7 @@ ClassicEditor.defaultConfig = {
 
 		// Headers sent along with the XMLHttpRequest to the upload server.
 		headers: {
-			'X-CSRF-TOKEN': 'CSRF-Token',
+			'X-CSRF-TOKEN': 'CSRF-Token'
 		}
 	},
 

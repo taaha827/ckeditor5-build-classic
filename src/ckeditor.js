@@ -29,6 +29,9 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
+
+
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,7 +59,8 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	SimpleUploadAdapter
 ];
 
 // Editor configuration.
@@ -82,6 +86,19 @@ ClassicEditor.defaultConfig = {
 			'redo'
 		]
 	},
+	simpleUpload: {
+		// The URL that the images are uploaded to.
+		uploadUrl: 'https://sdm.backend.staging.invo.zone/users/content/image',
+
+		// Enable the XMLHttpRequest.withCredentials property.
+		withCredentials: true,
+
+		// Headers sent along with the XMLHttpRequest to the upload server.
+		headers: {
+			'X-CSRF-TOKEN': 'CSRF-Token',
+		}
+	},
+
 	image: {
 		toolbar: [
 			'imageStyle:full',

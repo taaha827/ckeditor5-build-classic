@@ -1,0 +1,1 @@
+(function(d){	const l = d['ur'] = d['ur'] || {};	l.dictionary=Object.assign(		l.dictionary||{},		{"Upload in progress":"آپلوڈ جاری ہے"}	);l.getPluralForm=function(n){return (n != 1);;};})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
